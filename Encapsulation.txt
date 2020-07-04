@@ -1,0 +1,26 @@
+class Test
+{
+	private int a;
+	int getValue()
+	{
+		return a;
+	}
+	
+	void setValue(int x)
+	{
+		a =x;
+	}
+}
+
+public class Encapsulation
+{
+	public static void main(String srgs[])
+	{
+		Test obj = new Test();
+		obj.setValue(10);
+		//obj.display();
+		int b = obj.getValue();
+		System.out.println(b);
+		
+	}
+}

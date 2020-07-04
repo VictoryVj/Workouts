@@ -1,0 +1,51 @@
+//import java.io.*;
+//import java.util.*;
+abstract class Employee
+{
+	private String EmpName;
+	int EmpSalary;
+	void setName()
+	{
+		this.EmpName = "Vijay";
+	}
+	String getName()
+	{
+		return EmpName;
+	}
+	abstract void ComputeSalary();
+	int getSalary()
+	{
+		return EmpSalary;
+	}
+}
+
+class FullTime extends Employee
+{
+	void ComputeSalary()
+	{
+		EmpSalary = 5*1000;
+	}
+}
+
+
+class PartTime extends Employee
+{
+	void ComputeSalary()
+	{
+		EmpSalary = 5*3000;
+	}
+}
+
+public class Abstraction
+{
+	public static void main(String str[])
+	{
+		Employee obj1 = new FullTime();
+		obj1.setName();
+		String Name = obj1.getName();
+		obj1.ComputeSalary();
+		obj1.getSalary();
+		int Salary = obj1.getSalary();
+		System.out.println(Name+" "+Salary);
+	}
+}

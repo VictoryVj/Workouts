@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class JumpingOnClouds 
+{
+    public static void main(String[] args) 
+    {
+        Scanner in = new Scanner(System.in);
+        int CloudCount = in.nextInt();
+        int[] clouds = new int[CloudCount];
+        for(int i = 0; i < CloudCount; i++) 
+        {
+            clouds[i] = in.nextInt();
+        }
+        int NoOfJumps = 0, i = 0;
+        while(true) {
+            if(i + 2 < CloudCount && clouds[i + 2] == 0) {
+                i += 2;
+            } else if(i + 1 < CloudCount)
+            {
+                i++;
+            }
+            else 
+            {
+                break;
+            }
+            NoOfJumps++;
+        }        
+        System.out.println(NoOfJumps);        
+        in.close();
+    }
+}
